@@ -11,7 +11,7 @@
 '''
 
 n = int(input())
-standartString = 'anton'
+standardString = 'anton'
 resultString = ''
 numberOfString = 0
 listOfNumberString = []
@@ -20,13 +20,13 @@ for i in range(n):
     testString = input()
     if testString.count('n') >= 2:
         for symbol in testString:
-            if symbol in standartString and symbol not in resultString:
+            if symbol in standardString and symbol not in resultString:
                 resultString += symbol
             else:
                 continue
     else:
         continue
-    if standartString == resultString + 'n' or standartString == testString:
+    if standardString == resultString + 'n' or standardString == testString:
         numberOfString += 1
         listOfNumberString.append(numberOfString)
         resultString = ''
