@@ -1,12 +1,19 @@
-s = input()
-sum_k = len(s) * 60
-sum_r = float(sum_k / 100)
-sum_str = str(sum_r)
-sum_str_result = sum_str
-sum_str_result = sum_str_result.replace('.', ' р. ')
-if sum_str_result[-1] !=0:
-    sum_str_result + = ' коп.'
-else:
-    sum_str_result + = '0 коп.'
+'''Дана строка текста. Напишите программу для подсчета стоимости строки, исходя из того, что один любой символ (в том числе пробел) стоит 606060 копеек. Ответ дайте в рублях и копейках в соответствии с примерами.
 
-print(sum_str_result)
+Формат входных данных
+На вход программе подается строка текста.
+
+Формат выходных данных
+Программа должна вывести стоимость строки.'''
+
+inputString = input()
+priceStringOfKopecks = len(inputString) * 60
+priceStringOfRubles = float(priceStringOfKopecks / 100)
+resultPriceOfString = str(priceStringOfRubles)
+resultPriceOfString.replace('.', ' р. ')
+if resultPriceOfString[-1] != 0:
+    resultPriceOfString += ' коп.'
+else:
+    resultPriceOfString += '0 коп.'
+
+print(resultPriceOfString)

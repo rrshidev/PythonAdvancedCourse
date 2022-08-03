@@ -1,6 +1,4 @@
 '''
-Различные элементы
-
 На вход программе подается строка текста, содержащая натуральные числа, расположенные по неубыванию. Из строки формируется список чисел. Напишите программу для подсчета количества разных элементов в списке.
 
 Формат входных данных
@@ -12,19 +10,21 @@
 Примечание. Задачу можно решить без множеств.
 '''
 
-stringInput = input().split(' ')
-unicum = set(stringInput)
+Tim, Rus = input(), input()
+stone, scissors, paper, lizard, spock = 'камень', 'ножницы', 'бумага', 'ящерица', 'Спок'
 
-print(len(unicum))
-
-'''
-stringInput = input().split(' ')
-unicum = set(stringInput)
-
-resultList = []
-for i in unicum:
-    resultList.append(i)
-
-print(len(resultList))
-
-'''
+if (Tim == paper and Rus == stone) or \
+        (Tim == paper and Rus == spock) or\
+        (Tim == stone and Rus == scissors) or \
+        (Tim == scissors and Rus == paper) or \
+        (Tim == stone and Rus == lizard) or \
+        (Tim == scissors and Rus == lizard) or \
+        (Tim == spock and Rus == scissors) or \
+        (Tim == spock and Rus == stone) or \
+        (Tim == lizard and Rus == spock) or \
+        (Tim == lizard and Rus == paper):
+    print('Тимур')
+elif Tim == Rus:
+    print('ничья')
+else:
+    print('Руслан')
