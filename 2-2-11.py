@@ -36,21 +36,16 @@ Sample Output 1:
 уу у
 '''
 
-
 # MAIN FUNCTION
-
 def delSym(singTxt, sym):
     for i in sym:
         x = ' ' + i
-        if i in singTxt:
+        if i in singTxt.strip():
             print(singTxt + x)
-            singTxt = singTxt.replace(i, '').strip()
-
+            singTxt = singTxt.replace(i, '').replace('  ', ' ')
 
 # INPUT
-
 singString = input() + ' запретил букву'
-
 singSym = []
 
 for i in range(1072, 1104):
