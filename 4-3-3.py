@@ -24,16 +24,13 @@
 '''
 
 def pascal(num):
-
-    p = []
     res = []
-    cur = 0
-    for i in range(1, num):
-        p = [1] * (i + 1)
+    for i in range(0, num+1):
+        cur = [1] * (i + 1)
         for j in range(1, i):
-            cur[i] = p[i - 1][j - 1] + p[i - 1][j]
-            res.append(cur)
-    return res[num - 1]
+            cur[j] = res[i - 1][j - 1] + res[i - 1][j]
+        res.append(cur)
+    return res[num]
 
 n = int(input())
 print(pascal(n))
