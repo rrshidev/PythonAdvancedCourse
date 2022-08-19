@@ -26,18 +26,18 @@ Sample Output 2:
 
 def groupizm(s):
     in_list = []
-    f_list = []
+    tmp = []
     res = []
-    for _ in s:
-        in_list.append(list(_))
+    for char in s:
+        in_list.append(list(char))
     in_list.append([])
     for i in range(1, len(in_list)):
         if in_list[i-1] == in_list[i]:
-            f_list += in_list[i-1]
-        elif in_list[i-1] != in_list[i] and f_list != []:
-            f_list += in_list[i-1]
-            res.append(f_list)
-            f_list = []
+            tmp += in_list[i-1]
+        elif in_list[i-1] != in_list[i] and tmp != []:
+            tmp += in_list[i-1]
+            res.append(tmp)
+            tmp = []
         elif in_list[i-1] != in_list[i] and in_list.index(in_list[i]) != -1:
             res.append(in_list[i-1])
     return res
