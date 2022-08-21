@@ -34,17 +34,17 @@ Sample Output 1:
 дуде игрец
 '''
 
-def print_matrix(row, col):
+def print_matrix(row_cnt, col_cnt):
     matrix = []
     tmp = []
-    for r in range(row):
-        for c in range(col):
+    for r in range(row_cnt):
+        for c in range(col_cnt):
             str_in = input().split()
             tmp.append(str_in)
         matrix.append(tmp)
         tmp = []
-    for r in range(row):
-        for c in range(col):
+    for r in range(row_cnt):
+        for c in range(col_cnt):
             print(str(*matrix[r][c]), end=' ')
         print()
 

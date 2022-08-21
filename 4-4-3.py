@@ -23,11 +23,13 @@ Sample Output 1:
 '''
 
 def matrix_trace(m_size):
+
     matrix = []
-    trace = []
     for elem in range(m_size):
         temp = [int(num) for num in input().split()]
         matrix.append(temp)
+
+    trace = []
     for row in range(m_size):
         for col in range(m_size):
             if row == col:

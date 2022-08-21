@@ -28,16 +28,16 @@ Sample Output 1:
 
 def above_average(m_size):
     matrix = []
-    result = 0
     for elem in range(m_size):
         temp = [int(num) for num in input().split()]
         matrix.append(temp)
+
     for row in matrix:
+        result = 0
         for elem in row:
             if elem > sum(row)/m_size:
                 result += 1
         print(result)
-        result = 0
 
 
 matrix_size = int(input())
