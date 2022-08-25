@@ -1,5 +1,5 @@
 '''
-Максимальный в области 1
+Максимальный в области 2 🌶️
 
 Напишите программу, которая выводит максимальный элемент в заштрихованной области квадратной матрицы.
 
@@ -9,7 +9,7 @@
 Формат выходных данных
 Программа должна вывести одно число — максимальный элемент в заштрихованной области квадратной матрицы.
 
-Примечание. Элементы главной диагонали также учитываются.
+Примечание. Элементы диагоналей также учитываются.
 Тестовые данные 🟢
 
 Sample Input 1:
@@ -21,20 +21,29 @@ Sample Input 1:
 
 Sample Output 1:
 
-7
+8
+
+4
+-3 1 4 -3
+-9 -3 -3 -10
+-4 -3 -3 -2
+-3 0 0 -3
 '''
 
 def maximum_in_area(m_size):
     matrix = []
     result = -99999999
-    for j in range(m_size):
+    tmp = []
+    for row_num in range(m_size):
         temp = [int(num) for num in input().split()]
         matrix.append(temp)
-    for i in range(m_size):
-        for j in range(m_size):
-            if (i > j and i < m_size-1-j) or (i > j and i > m_size-1-j) or (i == j):
-                temp.append(matrix[i][j])
-    result = max(temp)
+    for row_num in range(m_size):
+        for col_num in range(m_size):
+            if (row_num > col_num) and (row_num < m_size - 1 - col_num) or \
+                    (row_num < col_num) and (row_num > m_size - 1 - col_num) or \
+                    row_num == col_num or m_size == row_num + col_num + 1:
+                tmp.append(matrix[row_num][col_num])
+    result = max(tmp)
     return result
 
 
