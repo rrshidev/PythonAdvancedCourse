@@ -16,7 +16,7 @@ for i in range(0, numPoint):
     x, y = int(decard[0]), int(decard[1])
     if x > 0 and y > 0:
         cnt1 += 1
-    elif x < 0 and y > 0:
+    elif x < 0 < y:
         cnt2 += 1
     elif x < 0 and y < 0:
         cnt3 += 1

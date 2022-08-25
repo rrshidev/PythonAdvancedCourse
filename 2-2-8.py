@@ -14,7 +14,7 @@ Tim, Rus = input(), input()
 stone, scissors, paper, lizard, spock = 'камень', 'ножницы', 'бумага', 'ящерица', 'Спок'
 
 if (Tim == paper and Rus == stone) or \
-        (Tim == paper and Rus == spock) or\
+        (Tim == paper and Rus == spock) or \
         (Tim == stone and Rus == scissors) or \
         (Tim == scissors and Rus == paper) or \
         (Tim == stone and Rus == lizard) or \

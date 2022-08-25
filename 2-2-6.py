@@ -18,7 +18,8 @@ n = int(input())
 stringInputList = [input() for i in range(0, n)]
 mul = int(input())
 
-def multiChek():
+
+def multi_check():
     result = 'НЕТ'
     for i in range(n):
         x = int(stringInputList[i])
@@ -30,4 +31,5 @@ def multiChek():
                     return result
     return result
 
-print(multiChek())
+print(multi_check())
+
