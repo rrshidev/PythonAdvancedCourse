@@ -19,7 +19,7 @@ res = []
 for input_str in range(int(input())):
     str_in = input()
     for letter in str_in:
-        if letter in check:
+        if letter == check:
             check = check[1::]
     if check == '':
         cnt += 1
