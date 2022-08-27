@@ -11,12 +11,14 @@
 Примечание. Правила игры стандартные: камень побеждает ножницы, но проигрывает бумаге, а ножницы побеждают бумагу.
 '''
 
-Tim, Rus = input(), input()
+tim_choice, rus_choice = input(), input()
 stone, scissors, paper = 'камень', 'ножницы', 'бумага'
 
-if (Tim == paper and Rus == stone) or (Tim == stone and Rus == scissors) or (Tim == scissors and Rus == paper):
+if (tim_choice == paper and rus_choice == stone) or \
+        (tim_choice == stone and rus_choice == scissors) or \
+        (tim_choice == scissors and rus_choice == paper):
     print('Тимур')
-elif Tim == Rus:
+elif tim_choice == rus_choice:
     print('ничья')
 else:
     print('Руслан')

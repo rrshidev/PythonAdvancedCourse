@@ -7,13 +7,13 @@
 Программа должна вывести стоимость строки.'''
 
 inputString = input()
-priceStringOfKopecks = len(inputString) * 60
-priceStringOfRubles = float(priceStringOfKopecks / 100)
-resultPriceOfString = str(priceStringOfRubles)
-resultPriceOfString.replace('.', ' р. ')
-if resultPriceOfString[-1] != 0:
-    resultPriceOfString += ' коп.'
+price_kopecks = len(inputString) * 60
+price_rubles = float(price_kopecks / 100)
+result_price = str(price_rubles)
+result_price.replace('.', ' р. ')
+if result_price[-1] != 0:
+    result_price += ' коп.'
 else:
-    resultPriceOfString += '0 коп.'
+    result_price += '0 коп.'
 
-print(resultPriceOfString)
+print(result_price)

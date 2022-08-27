@@ -8,19 +8,18 @@
 Примечание. Учтите, что точки, лежащие на осях координат, не принято относить к какой-либо координатной четверти.
 '''
 
-numPoint = int(input())
-l = []
+num_point = int(input())
 cnt1, cnt2, cnt3, cnt4 = 0, 0, 0, 0
-for i in range(0, numPoint):
-    decard = input().split(' ')
-    x, y = int(decard[0]), int(decard[1])
+for i in range(0, num_point):
+    coord = input().split(' ')
+    x, y = int(coord[0]), int(coord[1])
     if x > 0 and y > 0:
         cnt1 += 1
     elif x < 0 < y:
         cnt2 += 1
     elif x < 0 and y < 0:
         cnt3 += 1
-    elif x > 0 and y < 0:
+    elif y < 0 < x:
         cnt4 += 1
     else:
         continue
