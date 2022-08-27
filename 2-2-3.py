@@ -12,7 +12,7 @@
 
 
 in_str = input().split(' ')
-result = [], [], []
+result = []
 
 for i in range(1, len(in_str), 2):
     result.append(in_str[i])

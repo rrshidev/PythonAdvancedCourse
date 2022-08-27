@@ -9,6 +9,7 @@
 Число нужно выводить без незначащих нулей.
 """
 
+
 str_num = input()
 if len(str_num) == 5:
     str_num = str_num[-1::-1]

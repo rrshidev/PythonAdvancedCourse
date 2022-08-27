@@ -6,8 +6,9 @@
 Программа должна вывести одно число – количество элементов списка, больших предыдущего.
 
 """
-nums = [int(num) for num in input().split()]
 
+
+nums = [int(num) for num in input().split()]
 cnt = 0
 prev = float('inf')
 for num in nums:
