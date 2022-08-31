@@ -1,10 +1,11 @@
-'''
+"""
 Симметричная матрица
 
 Напишите программу, которая проверяет симметричность квадратной матрицы относительно главной диагонали.
 
 Формат входных данных
-На вход программе подаётся натуральное число nnn — количество строк и столбцов в матрице, затем элементы матрицы построчно через пробел.
+На вход программе подаётся натуральное число nnn — количество строк и столбцов в матрице, затем элементы матрицы
+построчно через пробел.
 
 Формат выходных данных
 Программа должна вывести YES, если матрица симметрична относительно главной диагонали, и слово NO в противном случае.
@@ -20,26 +21,25 @@ Sample Input 1:
 Sample Output 1:
 
 YES
+"""
 
 
-'''
-
-def is_simmetry(S_M_S):
+def is_symmetry(size):
     matrix = []
-    for row in range(S_M_S):
-        temp = [int(element) for element in input().split()]
-        matrix.append(temp)
+    for row in range(size):
+        nums = [int(num) for num in input().split()]
+        matrix.append(nums)
     s_matrix = []
-    for c in range(S_M_S):
-        tmp_str = []
-        for r in range(S_M_S):
-            tmp_str.append(matrix[r][c])
-        s_matrix.append(tmp_str)
+    for c in range(size):
+        flip_nums = []
+        for r in range(size):
+            flip_nums.append(matrix[r][c])
+        s_matrix.append(flip_nums)
     if matrix == s_matrix:
         print('YES')
     else:
         print('NO')
 
 
-square_matrix_size = int(input()) #shortly name of it value - SMS =)
-is_simmetry(square_matrix_size)
+square_matrix_size = int(input())
+is_symmetry(square_matrix_size)
